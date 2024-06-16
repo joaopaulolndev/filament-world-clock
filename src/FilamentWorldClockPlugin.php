@@ -19,6 +19,8 @@ class FilamentWorldClockPlugin implements Plugin
 
     public Closure | null | int $sort = null;
 
+    public int | string | array $columnSpan = '1/2';
+
     public array $timezones = [];
 
     public function getId(): string
@@ -133,5 +135,17 @@ class FilamentWorldClockPlugin implements Plugin
     public function getSort(): ?int
     {
         return $this->evaluate($this->sort);
+    }
+
+    public function setColumnSpan(int | string | array $value = '1/2'): static
+    {
+        $this->columnSpan = $value;
+
+        return $this;
+    }
+
+    public function getColumnSpan(): int | string | array
+    {
+        return $this->evaluate($this->columnSpan);
     }
 }

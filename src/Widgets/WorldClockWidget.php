@@ -82,15 +82,20 @@ class WorldClockWidget extends Widget
 
     public static function getSort(): int
     {
-
         $plugin = Filament::getCurrentPanel()?->getPlugin('filament-world-clock');
 
         return $plugin->getSort() ?? -1;
     }
 
+    public function getColumnSpan(): int | string | array
+    {
+        $plugin = Filament::getCurrentPanel()?->getPlugin('filament-world-clock');
+
+        return $plugin->getColumnSpan() ?? '1/2';
+    }
+
     public function render(): View
     {
-
         return view(static::$view, [
             'cities' => $this->cities,
             'shouldShowTitle' => $this->shouldShowTitle(),

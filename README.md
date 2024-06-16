@@ -64,6 +64,7 @@ FilamentWorldClockPlugin::make()
     ->setTitle('Hours') //Optional title default is: 'World Clock'
     ->setDescription('Different description') //Optional description default is: 'Show hours around the world by timezone'
     ->setQuantityPerRow(1) //Optional quantity per row default is: 1
+    ->setColumnSpan('full') //Optional column span default is: '1/2' 
     ->setSort(10)
 ```
 
