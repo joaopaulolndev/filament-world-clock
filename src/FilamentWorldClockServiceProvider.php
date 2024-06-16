@@ -9,12 +9,12 @@ use Filament\Support\Assets\Js;
 use Filament\Support\Facades\FilamentAsset;
 use Filament\Support\Facades\FilamentIcon;
 use Illuminate\Filesystem\Filesystem;
+use Joaopaulolndev\FilamentWorldClock\Commands\FilamentWorldClockCommand;
+use Joaopaulolndev\FilamentWorldClock\Testing\TestsFilamentWorldClock;
 use Livewire\Features\SupportTesting\Testable;
 use Spatie\LaravelPackageTools\Commands\InstallCommand;
 use Spatie\LaravelPackageTools\Package;
 use Spatie\LaravelPackageTools\PackageServiceProvider;
-use Joaopaulolndev\FilamentWorldClock\Commands\FilamentWorldClockCommand;
-use Joaopaulolndev\FilamentWorldClock\Testing\TestsFilamentWorldClock;
 
 class FilamentWorldClockServiceProvider extends PackageServiceProvider
 {
@@ -65,15 +65,15 @@ class FilamentWorldClockServiceProvider extends PackageServiceProvider
     public function packageBooted(): void
     {
         // Asset Registration
-//        FilamentAsset::register(
-//            $this->getAssets(),
-//            $this->getAssetPackageName()
-//        );
+        //        FilamentAsset::register(
+        //            $this->getAssets(),
+        //            $this->getAssetPackageName()
+        //        );
 
-//        FilamentAsset::registerScriptData(
-//            $this->getScriptData(),
-//            $this->getAssetPackageName()
-//        );
+        //        FilamentAsset::registerScriptData(
+        //            $this->getScriptData(),
+        //            $this->getAssetPackageName()
+        //        );
 
         // Icon Registration
         FilamentIcon::register($this->getIcons());

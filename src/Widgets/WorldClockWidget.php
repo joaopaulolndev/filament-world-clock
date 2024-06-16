@@ -30,16 +30,16 @@ class WorldClockWidget extends Widget
 
         $plugin = Filament::getCurrentPanel()?->getPlugin('filament-world-clock');
 
-        if($plugin->getTimezones()) {
+        if ($plugin->getTimezones()) {
             $timezones = $plugin->getTimezones();
         }
 
         $times = [];
-        foreach ($timezones as $timezone){
+        foreach ($timezones as $timezone) {
 
             $time = Carbon::now($timezone);
-            $name = explode('/',$time->getTimezone()->getName())[1];
-            $name = str_replace('_',' ',$name);
+            $name = explode('/', $time->getTimezone()->getName())[1];
+            $name = str_replace('_', ' ', $name);
             $hour = (int) $time->format('H');
             $times[] = [
                 'name' => __(ucwords($name)),
@@ -80,14 +80,16 @@ class WorldClockWidget extends Widget
         return $plugin->getQuantityPerRow();
     }
 
-    public static function getSort(): int {
+    public static function getSort(): int
+    {
 
         $plugin = Filament::getCurrentPanel()?->getPlugin('filament-world-clock');
 
         return $plugin->getSort() ?? -1;
     }
 
-    public function render(): View {
+    public function render(): View
+    {
 
         return view(static::$view, [
             'cities' => $this->cities,

@@ -12,6 +12,7 @@ class FilamentWorldClockPlugin implements Plugin
     use EvaluatesClosures;
 
     public Closure | bool $shouldShowTitle = true;
+
     public Closure | int $quantityPerRow = 1;
 
     public Closure | string $timeFormat = 'H:i';
@@ -122,7 +123,7 @@ class FilamentWorldClockPlugin implements Plugin
         return $this->evaluate($this->timeFormat);
     }
 
-    public function setSort(Closure | int $value = null): static
+    public function setSort(Closure | int | null $value = null): static
     {
         $this->sort = $value;
 

@@ -13,10 +13,10 @@ use Filament\Support\SupportServiceProvider;
 use Filament\Tables\TablesServiceProvider;
 use Filament\Widgets\WidgetsServiceProvider;
 use Illuminate\Database\Eloquent\Factories\Factory;
+use Joaopaulolndev\FilamentWorldClock\FilamentWorldClockServiceProvider;
 use Livewire\LivewireServiceProvider;
 use Orchestra\Testbench\TestCase as Orchestra;
 use RyanChandler\BladeCaptureDirective\BladeCaptureDirectiveServiceProvider;
-use Joaopaulolndev\FilamentWorldClock\FilamentWorldClockServiceProvider;
 
 class TestCase extends Orchestra
 {
