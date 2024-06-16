@@ -40,13 +40,35 @@ use Joaopaulolndev\FilamentWorldClock\FilamentWorldClockPlugin;
 
 ->plugins([
     FilamentWorldClockPlugin::make()
-                        ->timezones([
-                            'America/New_York',
-                            'America/Sao_Paulo',
-                            'Asia/Tokyo',
-                        ])
+        ->timezones([
+            'America/New_York',
+            'America/Sao_Paulo',
+            'Asia/Tokyo',
+        ])
 ])
 ```
+
+Optionally, you can add more configs as example below:
+
+```php
+use Joaopaulolndev\FilamentWorldClock\FilamentWorldClockPlugin;
+
+FilamentWorldClockPlugin::make()
+    ->timezones([
+        'America/New_York',
+        'America/Sao_Paulo',
+        'Asia/Tokyo',
+    ])
+    ->setTimeFormat('H:i') //Optional time format default is: 'H:i'
+    ->shouldShowTitle(false) //Optional show title default is: true
+    ->setTitle('Hours') //Optional title default is: 'World Clock'
+    ->setDescription('Different description') //Optional description default is: 'Show hours around the world by timezone'
+    ->setQuantityPerRow(1) //Optional quantity per row default is: 1
+    ->setSort(10)
+```
+
+> [!NOTE]
+> if missing some flag, the default value will be used. But you can open a pr to add more flags.
 
 ## Testing
 
