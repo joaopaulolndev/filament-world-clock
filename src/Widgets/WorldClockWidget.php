@@ -20,7 +20,6 @@ class WorldClockWidget extends Widget
 
     protected static ?string $pollingInterval = '60s';
 
-
     public function __construct()
     {
         $timezones = [
@@ -88,7 +87,8 @@ class WorldClockWidget extends Widget
         return $plugin->getSort() ?? -1;
     }
 
-    public function getColumnSpan(): int|string|array {
+    public function getColumnSpan(): int | string | array
+    {
         $plugin = Filament::getCurrentPanel()?->getPlugin('filament-world-clock');
 
         return $plugin->getColumnSpan() ?? '1/2';
