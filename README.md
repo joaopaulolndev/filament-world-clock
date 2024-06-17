@@ -1,4 +1,4 @@
-# Show hours around the world by timezone
+# Filament widget to show hours around the world by timezone
 
 [![Latest Version on Packagist](https://img.shields.io/packagist/v/joaopaulolndev/filament-world-clock.svg?style=flat-square)](https://packagist.org/packages/joaopaulolndev/filament-world-clock)
 [![GitHub Tests Action Status](https://img.shields.io/github/actions/workflow/status/joaopaulolndev/filament-world-clock/run-tests.yml?branch=main&label=tests&style=flat-square)](https://github.com/joaopaulolndev/filament-world-clock/actions?query=workflow%3Arun-tests+branch%3Amain)
@@ -6,8 +6,12 @@
 [![Total Downloads](https://img.shields.io/packagist/dt/joaopaulolndev/filament-world-clock.svg?style=flat-square)](https://packagist.org/packages/joaopaulolndev/filament-world-clock)
 
 
-
 The Filament World Clock plugin designed to showcase global timezones in a card format is a user-friendly tool that allows users to effortlessly display current times across various regions worldwide.
+<div class="filament-hidden">
+
+![Screenshot of Application Feature](https://raw.githubusercontent.com/joaopaulolndev/filament-world-clock/main/art/joaopaulolndev-filament-world-clock.jpg)
+
+</div>
 
 ## Installation
 
