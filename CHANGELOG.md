@@ -2,6 +2,12 @@
 
 All notable changes to `filament-world-clock` will be documented in this file.
 
+## v1.0.1 - 2024-06-18
+
+- Fixed bug reported by @edeoliv
+
+**Full Changelog**: https://github.com/joaopaulolndev/filament-world-clock/compare/v1.0.0...v1.0.1
+
 ## v1.0.0 - 2024-06-17
 
 ### What's Changed
