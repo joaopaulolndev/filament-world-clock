@@ -2,6 +2,4 @@
 
 namespace Joaopaulolndev\FilamentWorldClock;
 
-class FilamentWorldClock
-{
-}
+class FilamentWorldClock {}
