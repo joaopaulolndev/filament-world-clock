@@ -19,7 +19,8 @@
             <div class="grid grid-cols-1 gap-2 md:grid-cols-{{$quantityPerRow}}"> <!-- md:grid-cols-2 -->
                 @foreach ($cities as $city)
                     <div class="flex items-center justify-between bg-gray-100 dark:bg-gray-700 p-2 rounded-md shadow-sm">
-                        <span class="text-sm font-medium text-gray-800 dark:text-white">{{ $city['flag'] }} {{ $city['name'] }}</span>
+                        <span class="flex text-sm font-medium text-gray-800 dark:text-white">
+                            <img src="{{ $city['flag'] }}" width="16" height="16" style="margin-right: 10px;"/> {{ $city['name'] }}</span>
                         <span class="flex items-center text-xs text-gray-500 dark:text-gray-300">
                             {{ $city['time'] }}
                             @if($city['night'])

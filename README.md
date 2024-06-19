@@ -33,7 +33,14 @@ Optionally, you can publish the translations using
 php artisan vendor:publish --tag="filament-world-clock-translations"
 ```
 
-This is the contents of the published config file:
+You can publish the flags
+
+>[!NOTE]
+> to publish the flags is necessary to run the command below:
+
+```bash
+php artisan vendor:publish --tag=blade-flags --force
+```
 
 ## Usage
 
