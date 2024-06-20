@@ -41,11 +41,18 @@ class WorldClockWidget extends Widget
             $name = explode('/', $time->getTimezone()->getName())[1];
             $name = str_replace('_', ' ', $name);
             $hour = (int) $time->format('H');
+
+            $offset = $time->getOffset();
+            $hours = intdiv($offset, 3600);
+            $minutes = abs($offset % 3600 / 60);
+            $gmtOffset = sprintf('GMT %+d:%02d', $hours, $minutes);
+
             $times[] = [
                 'name' => __(ucwords($name)),
                 'time' => $time->format($plugin->getTimeFormat() ?? 'H:i'),
                 'flag' => FlagsHelper::get($timezone),
                 'night' => $hour > 17 || $hour <= 6 ? true : false,
+                'timezone' => $gmtOffset
             ];
         }
 
