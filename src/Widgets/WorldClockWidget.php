@@ -52,7 +52,7 @@ class WorldClockWidget extends Widget
                 'time' => $time->format($plugin->getTimeFormat() ?? 'H:i'),
                 'flag' => FlagsHelper::get($timezone),
                 'night' => $hour > 17 || $hour <= 6 ? true : false,
-                'timezone' => $gmtOffset
+                'timezone' => $gmtOffset,
             ];
         }
 
