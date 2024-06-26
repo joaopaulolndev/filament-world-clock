@@ -68,6 +68,15 @@ class FlagsHelper
             'Asia/Hong_Kong' => asset('vendor/blade-flags/country-hk.svg'), // Hong Kong
             'Australia/Sydney' => asset('vendor/blade-flags/country-au.svg'), // Sydney
             'Pacific/Auckland' => asset('vendor/blade-flags/country-nz.svg'), // Auckland
+            'Africa/Johannesburg' => asset('vendor/blade-flags/country-za.svg'), // Johannesburg
+            'Africa/Lagos' => asset('vendor/blade-flags/country-ng.svg'), // Lagos
+            'Africa/Cairo' => asset('vendor/blade-flags/country-eg.svg'), // Cairo
+            'Africa/Nairobi' => asset('vendor/blade-flags/country-ke.svg'), // Nairobi
+            'Africa/Casablanca' => asset('vendor/blade-flags/country-ma.svg'), // Casablanca
+            'Africa/Algiers' => asset('vendor/blade-flags/country-dz.svg'), // Algiers
+            'Africa/Accra' => asset('vendor/blade-flags/country-gh.svg'), // Accra
+            'Africa/Dakar' => asset('vendor/blade-flags/country-sn.svg'), // Dakar
+            'Africa/Abidjan' => asset('vendor/blade-flags/country-ci.svg'), // Abidjan
             'Etc/UTC' => asset('vendor/blade-flags/country-xx.svg'), // Default flag (UTC)
         ];
 
