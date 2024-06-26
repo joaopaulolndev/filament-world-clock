@@ -66,6 +66,7 @@ class FlagsHelper
             'Asia/Dubai' => asset('vendor/blade-flags/country-ae.svg'), // Dubai
             'Asia/Kolkata' => asset('vendor/blade-flags/country-in.svg'), // Mumbai (Standard Time for India)
             'Asia/Hong_Kong' => asset('vendor/blade-flags/country-hk.svg'), // Hong Kong
+            'Asia/Manila' => asset('vendor/blade-flags/country-ph.svg'), // Manila
             'Australia/Sydney' => asset('vendor/blade-flags/country-au.svg'), // Sydney
             'Pacific/Auckland' => asset('vendor/blade-flags/country-nz.svg'), // Auckland
             'Africa/Johannesburg' => asset('vendor/blade-flags/country-za.svg'), // Johannesburg
