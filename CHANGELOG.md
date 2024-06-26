@@ -2,6 +2,12 @@
 
 All notable changes to `filament-world-clock` will be documented in this file.
 
+## v1.0.5 - 2024-06-26
+
+- Add African Timezones
+
+**Full Changelog**: https://github.com/joaopaulolndev/filament-world-clock/compare/v1.0.4...v1.0.5
+
 ## v1.0.4 - 2024-06-25
 
 - Add pt language
