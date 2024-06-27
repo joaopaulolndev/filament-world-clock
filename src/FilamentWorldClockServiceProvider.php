@@ -31,9 +31,11 @@ class FilamentWorldClockServiceProvider extends PackageServiceProvider
          */
         $package->name(static::$name)
             ->hasCommands($this->getCommands())
+            ->hasAssets()
             ->hasInstallCommand(function (InstallCommand $command) {
                 $command
                     ->publishConfigFile()
+                    ->publishAssets()
                     ->publishMigrations()
                     ->askToRunMigrations()
                     ->askToStarRepoOnGitHub('joaopaulolndev/filament-world-clock');
@@ -63,10 +65,10 @@ class FilamentWorldClockServiceProvider extends PackageServiceProvider
     public function packageBooted(): void
     {
         // Asset Registration
-        //        FilamentAsset::register(
-        //            $this->getAssets(),
-        //            $this->getAssetPackageName()
-        //        );
+        FilamentAsset::register(
+            $this->getAssets(),
+            $this->getAssetPackageName()
+        );
 
         //        FilamentAsset::registerScriptData(
         //            $this->getScriptData(),
@@ -91,7 +93,7 @@ class FilamentWorldClockServiceProvider extends PackageServiceProvider
 
     protected function getAssetPackageName(): ?string
     {
-        return 'joaopaulolndev/filament-world-clock';
+        return 'Joaopaulolndev/filament-world-clock';
     }
 
     /**
@@ -102,7 +104,7 @@ class FilamentWorldClockServiceProvider extends PackageServiceProvider
         return [
             // AlpineComponent::make('filament-world-clock', __DIR__ . '/../resources/dist/components/filament-world-clock.js'),
             Css::make('filament-world-clock-styles', __DIR__ . '/../resources/dist/filament-world-clock.css'),
-            Js::make('filament-world-clock-scripts', __DIR__ . '/../resources/dist/filament-world-clock.js'),
+            // Js::make('filament-world-clock-scripts', __DIR__ . '/../resources/dist/filament-world-clock.js'),
         ];
     }
 

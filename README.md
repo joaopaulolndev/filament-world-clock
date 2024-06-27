@@ -21,6 +21,12 @@ You can install the package via composer:
 composer require joaopaulolndev/filament-world-clock
 ```
 
+>[!NOTE]
+> to publish the assets is necessary to run the command below:
+```bash
+php artisan vendor:publish --tag=filament-world-clock-assets --force
+```
+
 Optionally, you can publish the views using
 
 ```bash

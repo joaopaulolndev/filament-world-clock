@@ -1,1 +1,9 @@
 @import '../../vendor/filament/filament/resources/css/theme.css';
+
+.bg-clock-night {
+    @apply cursor-pointer hover:bg-center hover:bg-no-repeat hover:bg-night hover:!bg-[#161637] text-gray-800 dark:text-white hover:text-white;
+}
+
+.bg-clock-day {
+    @apply cursor-pointer hover:bg-center hover:bg-no-repeat hover:bg-day hover:!bg-[#548EFC] text-gray-800 dark:text-white hover:text-white;
+}
