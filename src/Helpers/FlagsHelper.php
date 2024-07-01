@@ -79,6 +79,60 @@ class FlagsHelper
             'Africa/Dakar' => asset('vendor/blade-flags/country-sn.svg'), // Dakar
             'Africa/Abidjan' => asset('vendor/blade-flags/country-ci.svg'), // Abidjan
             'Etc/UTC' => asset('vendor/blade-flags/country-xx.svg'), // Default flag (UTC)
+
+            //African Timezones
+            'Africa/Abidjan' => asset('vendor/blade-flags/country-ci.svg'), // Abidjan
+            'Africa/Accra' => asset('vendor/blade-flags/country-gh.svg'), // Accra
+            'Africa/Asmara' => asset('vendor/blade-flags/country-er.svg'), // Asmara
+            'Africa/Bamako' => asset('vendor/blade-flags/country-ml.svg'), // Bamako
+            'Africa/Bissau' => asset('vendor/blade-flags/country-gw.svg'), // Bissau
+            'Africa/Blantyre' => asset('vendor/blade-flags/country-mw.svg'), // Blantyre
+            'Africa/Cairo' => asset('vendor/blade-flags/country-eg.svg'), // Cairo
+            'Africa/Casablanca' => asset('vendor/blade-flags/country-ma.svg'), // Casablanca
+            'Africa/Dakar' => asset('vendor/blade-flags/country-sn.svg'), // Dakar
+            'Africa/Dar_es_Salaam' => asset('vendor/blade-flags/country-tz.svg'), // Dar_es_Salaam
+            'Africa/El_Aaiun' => asset('vendor/blade-flags/country-eh.svg'), // El_Aaiun
+            'Africa/Freetown' => asset('vendor/blade-flags/country-sl.svg'), // Freetown
+            'Africa/Johannesburg' => asset('vendor/blade-flags/country-za.svg'), // Johannesburg
+            'Africa/Kigali' => asset('vendor/blade-flags/country-rw.svg'), // Kigali
+            'Africa/Lome' => asset('vendor/blade-flags/country-tg.svg'), // Lome
+            'Africa/Malabo' => asset('vendor/blade-flags/country-gq.svg'), // Malabo
+            'Africa/Mogadishu' => asset('vendor/blade-flags/country-so.svg'), // Mogadishu
+            'Africa/Niamey' => asset('vendor/blade-flags/country-ne.svg'), // Niamey
+            'Africa/Sao_Tome' => asset('vendor/blade-flags/country-cf.svg'), // Sao_Tome
+            'Africa/Juba' => asset('vendor/blade-flags/country-ss.svg'), // Juba
+            'Africa/Kinshasa' => asset('vendor/blade-flags/country-cd.svg'), // Kinshasa
+            'Africa/Luanda' => asset('vendor/blade-flags/country-ao.svg'), // Luanda
+            'Africa/Maputo' => asset('vendor/blade-flags/country-mz.svg'), // Maputo
+            'Africa/Monrovia' => asset('vendor/blade-flags/country-lr.svg'), // Monrovia
+            'Africa/Nouakchott' => asset('vendor/blade-flags/country-mr.svg'), // Nouakchott
+            'Africa/Tripoli' => asset('vendor/blade-flags/country-ly.svg'), // Tripoli
+            'Africa/Addis_Ababa' => asset('vendor/blade-flags/country-et.svg'), // Addis_Ababa
+            'Africa/Bangui' => asset('vendor/blade-flags/country-cf.svg'), // Bangui
+            'Africa/Brazzaville' => asset('vendor/blade-flags/country-cg.svg'), // Brazzaville
+            'Africa/Ceuta' => asset('vendor/blade-flags/country-ma.svg'), // Ceuta
+            'Africa/Djibouti' => asset('vendor/blade-flags/country-dj.svg'), // Djibouti
+            'Africa/Gaborone' => asset('vendor/blade-flags/country-bw.svg'), // Gaborone
+            'Africa/Kampala' => asset('vendor/blade-flags/country-ug.svg'), // Kampala
+            'Africa/Lagos' => asset('vendor/blade-flags/country-ng.svg'), // Lagos
+            'Africa/Lubumbashi' => asset('vendor/blade-flags/country-cd.svg'), // Lubumbashi
+            'Africa/Maseru' => asset('vendor/blade-flags/country-ls.svg'), // Maseru
+            'Africa/Nairobi' => asset('vendor/blade-flags/country-ke.svg'), // Nairobi
+            'Africa/Ouagadougou' => asset('vendor/blade-flags/country-bf.svg'), // Ouagadougou
+            'Africa/Tunis' => asset('vendor/blade-flags/country-tn.svg'), // Tunis
+            'Africa/Algiers' => asset('vendor/blade-flags/country-dz.svg'), // Algiers
+            'Africa/Banjul' => asset('vendor/blade-flags/country-gm.svg'), // Banjul
+            'Africa/Bujumbura' => asset('vendor/blade-flags/country-bi.svg'), // Bujumbura
+            'Africa/Conakry' => asset('vendor/blade-flags/country-gn.svg'), // Conakry
+            'Africa/Douala' => asset('vendor/blade-flags/country-cm.svg'), // Douala
+            'Africa/Harare' => asset('vendor/blade-flags/country-zw.svg'), // Harare
+            'Africa/Khartoum' => asset('vendor/blade-flags/country-sd.svg'), // Khartoum
+            'Africa/Libreville' => asset('vendor/blade-flags/country-ga.svg'), // Libreville
+            'Africa/Lusaka' => asset('vendor/blade-flags/country-zm.svg'), // Lusaka
+            'Africa/Mbabane' => asset('vendor/blade-flags/country-sz.svg'), // Mbabane
+            'Africa/Ndjamena' => asset('vendor/blade-flags/country-td.svg'), // Ndjamena
+            'Africa/Porto-Novo' => asset('vendor/blade-flags/country-bj.svg'), // Porto-Novo
+            'Africa/Windhoek' => asset('vendor/blade-flags/country-na.svg'), // Windhoek
         ];
 
         return $timezones[$timezone] ?? '🕒';
