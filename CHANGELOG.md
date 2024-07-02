@@ -2,6 +2,18 @@
 
 All notable changes to `filament-world-clock` will be documented in this file.
 
+## v1.0.8 - 2024-07-02
+
+### What's Changed
+
+* Added African Countries to Flag Helpers by @TonyOsadolor in https://github.com/joaopaulolndev/filament-world-clock/pull/7
+
+### New Contributors
+
+* @TonyOsadolor made their first contribution in https://github.com/joaopaulolndev/filament-world-clock/pull/7
+
+**Full Changelog**: https://github.com/joaopaulolndev/filament-world-clock/compare/v1.0.7...v1.0.8
+
 ## v1.0.7 - 2024-06-27
 
 ### What's Changed
