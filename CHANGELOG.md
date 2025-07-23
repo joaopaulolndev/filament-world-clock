@@ -2,6 +2,22 @@
 
 All notable changes to `filament-world-clock` will be documented in this file.
 
+## v1.0.10 - 2025-07-23
+
+### What's Changed
+
+* Bump dependabot/fetch-metadata from 2.2.0 to 2.3.0 by @dependabot[bot] in https://github.com/joaopaulolndev/filament-world-clock/pull/11
+* Bump aglipanci/laravel-pint-action from 2.4 to 2.5 by @dependabot[bot] in https://github.com/joaopaulolndev/filament-world-clock/pull/12
+* Bump dependabot/fetch-metadata from 2.3.0 to 2.4.0 by @dependabot[bot] in https://github.com/joaopaulolndev/filament-world-clock/pull/14
+* Bump stefanzweifel/git-auto-commit-action from 5 to 6 by @dependabot[bot] in https://github.com/joaopaulolndev/filament-world-clock/pull/15
+* Update WorldClockWidget.php by @bilogic in https://github.com/joaopaulolndev/filament-world-clock/pull/16
+
+### New Contributors
+
+* @bilogic made their first contribution in https://github.com/joaopaulolndev/filament-world-clock/pull/16
+
+**Full Changelog**: https://github.com/joaopaulolndev/filament-world-clock/compare/v1.0.9...v1.0.10
+
 ## v1.0.9 - 2024-07-11
 
 ### What's Changed
