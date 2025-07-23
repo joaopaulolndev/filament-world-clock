@@ -63,42 +63,42 @@ class WorldClockWidget extends Widget
     {
         $plugin = Filament::getCurrentPanel()?->getPlugin('filament-world-clock');
 
-        return $plugin->getShouldShowTitle();
+        return $plugin?->getShouldShowTitle();
     }
 
     public function title()
     {
         $plugin = Filament::getCurrentPanel()?->getPlugin('filament-world-clock');
 
-        return $plugin->getTitle();
+        return $plugin?->getTitle();
     }
 
     public function description()
     {
         $plugin = Filament::getCurrentPanel()?->getPlugin('filament-world-clock');
 
-        return $plugin->getDescription();
+        return $plugin?->getDescription();
     }
 
     public function quantityPerRow()
     {
         $plugin = Filament::getCurrentPanel()?->getPlugin('filament-world-clock');
 
-        return $plugin->getQuantityPerRow();
+        return $plugin?->getQuantityPerRow();
     }
 
     public static function getSort(): int
     {
         $plugin = Filament::getCurrentPanel()?->getPlugin('filament-world-clock');
 
-        return $plugin->getSort() ?? -1;
+        return $plugin?->getSort() ?? -1;
     }
 
     public function getColumnSpan(): int | string | array
     {
         $plugin = Filament::getCurrentPanel()?->getPlugin('filament-world-clock');
 
-        return $plugin->getColumnSpan() ?? '1/2';
+        return $plugin?->getColumnSpan() ?? '1/2';
     }
 
     public function render(): View
