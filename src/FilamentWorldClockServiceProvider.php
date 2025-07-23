@@ -88,7 +88,7 @@ class FilamentWorldClockServiceProvider extends PackageServiceProvider
         }
 
         // Testing
-        Testable::mixin(new TestsFilamentWorldClock());
+        Testable::mixin(new TestsFilamentWorldClock);
     }
 
     protected function getAssetPackageName(): ?string
