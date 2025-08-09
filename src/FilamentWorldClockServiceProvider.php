@@ -37,13 +37,27 @@ class FilamentWorldClockServiceProvider extends PackageServiceProvider
         }
     }
 
+    public function packageBooted(): void
+    {
+        // Asset Registration
+        FilamentAsset::register(
+            $this->getAssets(),
+            $this->getAssetPackageName()
+        );
+    }
+
+    protected function getAssetPackageName(): ?string
+    {
+        return 'Joaopaulolndev/filament-world-clock';
+    }
+
     /**
      * @return array<Asset>
      */
     protected function getAssets(): array
     {
         return [
-            Css::make('filament-world-clock-styles', __DIR__ . '/../resources/dist/filament-world-clock.css'),
+            Css::make('filament-world-clock-styles', __DIR__ . '/../resources/build/filament-world-clock.css'),
         ];
     }
 }

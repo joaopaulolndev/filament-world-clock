@@ -1,7 +1,121 @@
-.bg-clock-night {
-    @apply cursor-pointer hover:bg-center hover:bg-no-repeat hover:bg-night hover:!bg-[#161637] text-gray-800 dark:text-white hover:text-white;
+.filament-world-clock-header {
+    margin-bottom: 1rem;
+}
+
+.filament-world-clock-title {
+    display: flex;
+    align-items: center;
+    font-size: 1.125rem;
+    line-height: 1.75rem;
+    font-weight: 600;
+    color: #111827;
+}
+
+html.dark .filament-world-clock-title {
+    color: white;
+}
+
+.filament-world-clock-icon {
+    width: 1rem;
+    height: 1rem;
+    margin-right: 8px;
+}
+
+html.dark .filament-world-clock-icon {
+    color: white;
+}
+
+.filament-world-clock-description {
+    margin-top: 0.25rem;
+    font-size: 0.75rem;
+    line-height: 1rem;
+    color: #4B5563;
+}
+
+.filament-world-clock-content {
+    display: grid;
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+    gap: 0.5rem;
+
+    & .md\:grid-cols-2 {
+        @media (min-width: 768px) {
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+        }
+    }
+
+    & .md\:grid-cols-3 {
+        @media (min-width: 768px) {
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+        }
+    }
 }
 
 .bg-clock-day {
-    @apply cursor-pointer hover:bg-center hover:bg-no-repeat hover:bg-day hover:!bg-[#548EFC] text-gray-800 dark:text-white hover:text-white;
+    color: #1F2937;
+    cursor: pointer;
+}
+
+.bg-clock-day:hover {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-image: url('/vendor/filament-world-clock/images/day.png');
+}
+
+.bg-clock-night {
+    color: #1F2937;
+    cursor: pointer;
+}
+
+.bg-clock-night:hover {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-image: url('/vendor/filament-world-clock/images/night.png');
+}
+
+.filament-world-clock-content-city {
+    display: flex;
+    padding: 0.5rem;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 0.375rem;
+    background-color: #F3F4F6;
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+}
+
+html.dark .filament-world-clock-content-city {
+    background-color: #1F2937;
+}
+
+.filament-world-clock-content-city-name {
+    display: flex;
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+    font-weight: 500;
+}
+
+html.dark .filament-world-clock-content-city-name {
+    color: white;
+}
+
+.filament-world-clock-content-city-name > img {
+    margin-right: 10px;
+}
+
+.filament-world-clock-content-city-name > small {
+    margin-left: 4px;
+}
+
+.filament-world-clock-content-city-hour {
+    display: flex;
+    align-items: center;
+    font-size: 0.75rem;
+    line-height: 1rem;
+}
+
+html.dark .filament-world-clock-content-city-hour {
+    color: white;
+}
+
+.filament-world-clock-content-city-hour > svg {
+    margin-left: 8px;
 }
