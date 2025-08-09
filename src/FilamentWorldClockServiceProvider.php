@@ -30,7 +30,6 @@ class FilamentWorldClockServiceProvider extends PackageServiceProvider
          * More info: https://github.com/spatie/laravel-package-tools
          */
         $package->name(static::$name)
-            ->hasCommands($this->getCommands())
             ->hasAssets()
             ->hasInstallCommand(function (InstallCommand $command) {
                 $command
@@ -40,16 +39,6 @@ class FilamentWorldClockServiceProvider extends PackageServiceProvider
                     ->askToRunMigrations()
                     ->askToStarRepoOnGitHub('joaopaulolndev/filament-world-clock');
             });
-
-        $configFileName = $package->shortName();
-
-        if (file_exists($package->basePath("/../config/{$configFileName}.php"))) {
-            $package->hasConfigFile();
-        }
-
-        if (file_exists($package->basePath('/../database/migrations'))) {
-            $package->hasMigrations($this->getMigrations());
-        }
 
         if (file_exists($package->basePath('/../resources/lang'))) {
             $package->hasTranslations();
@@ -70,10 +59,6 @@ class FilamentWorldClockServiceProvider extends PackageServiceProvider
             $this->getAssetPackageName()
         );
 
-        //        FilamentAsset::registerScriptData(
-        //            $this->getScriptData(),
-        //            $this->getAssetPackageName()
-        //        );
 
         // Icon Registration
         FilamentIcon::register($this->getIcons());
@@ -86,9 +71,6 @@ class FilamentWorldClockServiceProvider extends PackageServiceProvider
                 ], 'filament-world-clock-stubs');
             }
         }
-
-        // Testing
-        Testable::mixin(new TestsFilamentWorldClock);
     }
 
     protected function getAssetPackageName(): ?string
@@ -102,53 +84,7 @@ class FilamentWorldClockServiceProvider extends PackageServiceProvider
     protected function getAssets(): array
     {
         return [
-            // AlpineComponent::make('filament-world-clock', __DIR__ . '/../resources/dist/components/filament-world-clock.js'),
             Css::make('filament-world-clock-styles', __DIR__ . '/../resources/dist/filament-world-clock.css'),
-            // Js::make('filament-world-clock-scripts', __DIR__ . '/../resources/dist/filament-world-clock.js'),
-        ];
-    }
-
-    /**
-     * @return array<class-string>
-     */
-    protected function getCommands(): array
-    {
-        return [
-            FilamentWorldClockCommand::class,
-        ];
-    }
-
-    /**
-     * @return array<string>
-     */
-    protected function getIcons(): array
-    {
-        return [];
-    }
-
-    /**
-     * @return array<string>
-     */
-    protected function getRoutes(): array
-    {
-        return [];
-    }
-
-    /**
-     * @return array<string, mixed>
-     */
-    protected function getScriptData(): array
-    {
-        return [];
-    }
-
-    /**
-     * @return array<string>
-     */
-    protected function getMigrations(): array
-    {
-        return [
-            'create_filament-world-clock_table',
         ];
     }
 }
