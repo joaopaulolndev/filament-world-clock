@@ -32,12 +32,7 @@ class FilamentWorldClockServiceProvider extends PackageServiceProvider
         $package->name(static::$name)
             ->hasAssets()
             ->hasInstallCommand(function (InstallCommand $command) {
-                $command
-                    ->publishConfigFile()
-                    ->publishAssets()
-                    ->publishMigrations()
-                    ->askToRunMigrations()
-                    ->askToStarRepoOnGitHub('joaopaulolndev/filament-world-clock');
+                $command->askToStarRepoOnGitHub('joaopaulolndev/filament-world-clock');
             });
 
         if (file_exists($package->basePath('/../resources/lang'))) {
@@ -58,19 +53,6 @@ class FilamentWorldClockServiceProvider extends PackageServiceProvider
             $this->getAssets(),
             $this->getAssetPackageName()
         );
-
-
-        // Icon Registration
-        FilamentIcon::register($this->getIcons());
-
-        // Handle Stubs
-        if (app()->runningInConsole()) {
-            foreach (app(Filesystem::class)->files(__DIR__ . '/../stubs/') as $file) {
-                $this->publishes([
-                    $file->getRealPath() => base_path("stubs/filament-world-clock/{$file->getFilename()}"),
-                ], 'filament-world-clock-stubs');
-            }
-        }
     }
 
     protected function getAssetPackageName(): ?string
