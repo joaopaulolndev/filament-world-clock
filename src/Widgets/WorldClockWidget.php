@@ -14,7 +14,7 @@ class WorldClockWidget extends Widget
 {
     protected static bool $isLazy = false;
 
-    protected static string $view = 'filament-world-clock::filament.widgets.world-clock-widget';
+    protected string $view = 'filament-world-clock::filament.widgets.world-clock-widget';
 
     protected array $cities;
 
@@ -28,7 +28,7 @@ class WorldClockWidget extends Widget
             'America/Los_Angeles',
         ];
 
-        $plugin = Filament::getCurrentPanel()?->getPlugin('filament-world-clock');
+        $plugin = Filament::getCurrentOrDefaultPanel()?->getPlugin('filament-world-clock');
 
         if ($plugin->getTimezones()) {
             $timezones = $plugin->getTimezones();
@@ -61,49 +61,49 @@ class WorldClockWidget extends Widget
 
     public function shouldShowTitle(): bool
     {
-        $plugin = Filament::getCurrentPanel()?->getPlugin('filament-world-clock');
+        $plugin = Filament::getCurrentOrDefaultPanel()?->getPlugin('filament-world-clock');
 
         return $plugin?->getShouldShowTitle();
     }
 
     public function title()
     {
-        $plugin = Filament::getCurrentPanel()?->getPlugin('filament-world-clock');
+        $plugin = Filament::getCurrentOrDefaultPanel()?->getPlugin('filament-world-clock');
 
         return $plugin?->getTitle();
     }
 
     public function description()
     {
-        $plugin = Filament::getCurrentPanel()?->getPlugin('filament-world-clock');
+        $plugin = Filament::getCurrentOrDefaultPanel()?->getPlugin('filament-world-clock');
 
         return $plugin?->getDescription();
     }
 
     public function quantityPerRow()
     {
-        $plugin = Filament::getCurrentPanel()?->getPlugin('filament-world-clock');
+        $plugin = Filament::getCurrentOrDefaultPanel()?->getPlugin('filament-world-clock');
 
         return $plugin?->getQuantityPerRow();
     }
 
     public static function getSort(): int
     {
-        $plugin = Filament::getCurrentPanel()?->getPlugin('filament-world-clock');
+        $plugin = Filament::getCurrentOrDefaultPanel()?->getPlugin('filament-world-clock');
 
         return $plugin?->getSort() ?? -1;
     }
 
     public function getColumnSpan(): int | string | array
     {
-        $plugin = Filament::getCurrentPanel()?->getPlugin('filament-world-clock');
+        $plugin = Filament::getCurrentOrDefaultPanel()?->getPlugin('filament-world-clock');
 
         return $plugin?->getColumnSpan() ?? '1/2';
     }
 
     public function render(): View
     {
-        return view(static::$view, [
+        return view($this->view, [
             'cities' => $this->cities,
             'shouldShowTitle' => $this->shouldShowTitle(),
             'title' => $this->title(),

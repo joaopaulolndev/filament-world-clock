@@ -6,6 +6,7 @@ use Closure;
 use Filament\Contracts\Plugin;
 use Filament\Panel;
 use Filament\Support\Concerns\EvaluatesClosures;
+use Joaopaulolndev\FilamentWorldClock\Widgets\WorldClockWidget;
 
 class FilamentWorldClockPlugin implements Plugin
 {
@@ -31,7 +32,7 @@ class FilamentWorldClockPlugin implements Plugin
     public function register(Panel $panel): void
     {
         $panel->widgets([
-            Widgets\WorldClockWidget::class,
+            WorldClockWidget::class,
         ]);
     }
 
