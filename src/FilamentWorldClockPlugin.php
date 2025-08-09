@@ -6,6 +6,7 @@ use Closure;
 use Filament\Contracts\Plugin;
 use Filament\Panel;
 use Filament\Support\Concerns\EvaluatesClosures;
+use Joaopaulolndev\FilamentWorldClock\Widgets\WorldClockWidget;
 
 class FilamentWorldClockPlugin implements Plugin
 {
@@ -31,7 +32,7 @@ class FilamentWorldClockPlugin implements Plugin
     public function register(Panel $panel): void
     {
         $panel->widgets([
-            Widgets\WorldClockWidget::class,
+            WorldClockWidget::class,
         ]);
     }
 
@@ -103,6 +104,12 @@ class FilamentWorldClockPlugin implements Plugin
 
     public function setQuantityPerRow(Closure | int $value = 1): static
     {
+        if ($value < 1) {
+            $value = 1;
+        }
+        if ($value > 12) {
+            $value = 12;
+        }
         $this->quantityPerRow = $value;
 
         return $this;

@@ -1,15 +1,15 @@
 # Filament widget to show hours around the world by timezone
 
 [![Latest Version on Packagist](https://img.shields.io/packagist/v/joaopaulolndev/filament-world-clock.svg?style=flat-square)](https://packagist.org/packages/joaopaulolndev/filament-world-clock)
-[![GitHub Tests Action Status](https://img.shields.io/github/actions/workflow/status/joaopaulolndev/filament-world-clock/run-tests.yml?branch=main&label=tests&style=flat-square)](https://github.com/joaopaulolndev/filament-world-clock/actions?query=workflow%3Arun-tests+branch%3Amain)
-[![GitHub Code Style Action Status](https://img.shields.io/github/actions/workflow/status/joaopaulolndev/filament-world-clock/fix-php-code-style-issues.yml?branch=main&label=code%20style&style=flat-square)](https://github.com/joaopaulolndev/filament-world-clock/actions?query=workflow%3A"Fix+PHP+code+styling"+branch%3Amain)
+[![GitHub Tests Action Status](https://img.shields.io/github/actions/workflow/status/joaopaulolndev/filament-world-clock/run-tests.yml?branch=2.x&label=tests&style=flat-square)](https://github.com/joaopaulolndev/filament-world-clock/actions?query=workflow%3Arun-tests+branch%3A2.x)
+[![GitHub Code Style Action Status](https://img.shields.io/github/actions/workflow/status/joaopaulolndev/filament-world-clock/fix-php-code-style-issues.yml?branch=2.x&label=code%20style&style=flat-square)](https://github.com/joaopaulolndev/filament-world-clock/actions?query=workflow%3A"Fix+PHP+code+styling"+branch%3A2.x)
 [![Total Downloads](https://img.shields.io/packagist/dt/joaopaulolndev/filament-world-clock.svg?style=flat-square)](https://packagist.org/packages/joaopaulolndev/filament-world-clock)
 
 
 The Filament World Clock plugin designed to showcase global timezones in a card format is a user-friendly tool that allows users to effortlessly display current times across various regions worldwide.
 <div class="filament-hidden">
 
-![Screenshot of Application Feature](https://raw.githubusercontent.com/joaopaulolndev/filament-world-clock/main/art/joaopaulolndev-filament-world-clock.jpg)
+![Screenshot of Application Feature](https://raw.githubusercontent.com/joaopaulolndev/filament-world-clock/2.x/art/joaopaulolndev-filament-world-clock.jpg)
 
 </div>
 
@@ -18,7 +18,7 @@ The Filament World Clock plugin designed to showcase global timezones in a card 
 You can install the package via composer:
 
 ```bash
-composer require joaopaulolndev/filament-world-clock
+composer require joaopaulolndev/filament-world-clock:2.x
 ```
 
 >[!NOTE]

@@ -2,7 +2,7 @@
 .idea
 .phpunit.result.cache
 .vscode
-build
+/build
 composer.lock
 coverage
 docs
