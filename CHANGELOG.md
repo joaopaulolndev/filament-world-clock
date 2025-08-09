@@ -2,6 +2,15 @@
 
 All notable changes to `filament-world-clock` will be documented in this file.
 
+## v2.0.0 - 2025-08-09
+
+### What's Changed
+
+* Bump aglipanci/laravel-pint-action from 2.5 to 2.6 by @dependabot[bot] in https://github.com/joaopaulolndev/filament-world-clock/pull/17
+* 2.x upgrade v4 by @jeffersongoncalves in https://github.com/joaopaulolndev/filament-world-clock/pull/18
+
+**Full Changelog**: https://github.com/joaopaulolndev/filament-world-clock/compare/v1.0.10...v2.0.0
+
 ## v1.0.10 - 2025-07-23
 
 ### What's Changed
