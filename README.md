@@ -19,13 +19,14 @@ The Filament World Clock plugin designed to showcase global timezones in a card 
 |-----------------|------------------|
 | 1.x             | 3.x              |
 | 2.x             | 4.x              |
+| 3.x             | 5.x              |
 
 ## Installation
 
 You can install the package via composer:
 
 ```bash
-composer require joaopaulolndev/filament-world-clock:^2.0
+composer require joaopaulolndev/filament-world-clock:^3.0
 ```
 
 >[!NOTE]
