@@ -2,6 +2,21 @@
 
 All notable changes to `filament-world-clock` will be documented in this file.
 
+## v3.0.1 - 2026-02-28
+
+### What's Changed
+
+#### Bug Fixes
+
+- **fix(world-clock):** Resolve missing flags and console errors for unmapped timezones (#10)
+  - Replace hardcoded 150-entry timezone map with dynamic resolution using `DateTimeZone::getLocation()`
+  - Add `customFlags()` plugin method for user overrides
+  - Add `country-xx.svg` fallback for timezones without a country code (e.g. `Etc/UTC`)
+  
+- **fix(world-clock):** Safely access plugin instance to prevent errors when panel is not current (#13)
+
+**Full Changelog**: https://github.com/joaopaulolndev/filament-world-clock/compare/v3.0.0...v3.0.1
+
 ## v3.0.0 - 2026-01-20
 
 ### What's Changed
