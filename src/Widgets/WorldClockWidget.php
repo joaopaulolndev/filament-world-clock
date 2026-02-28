@@ -7,6 +7,7 @@ use Carbon\Carbon;
 use Filament\Facades\Filament;
 use Filament\Widgets\Widget;
 use Illuminate\Contracts\View\View;
+use Joaopaulolndev\FilamentWorldClock\FilamentWorldClockPlugin;
 use Joaopaulolndev\FilamentWorldClock\Helpers\FlagsHelper;
 
 #[AllowDynamicProperties]
@@ -20,6 +21,15 @@ class WorldClockWidget extends Widget
 
     protected static ?string $pollingInterval = '60s';
 
+    protected static function getPluginInstance(): ?FilamentWorldClockPlugin
+    {
+        try {
+            return Filament::getCurrentOrDefaultPanel()?->getPlugin('filament-world-clock');
+        } catch (\Exception $e) {
+            return null;
+        }
+    }
+
     public function __construct()
     {
         $timezones = [
@@ -28,11 +38,13 @@ class WorldClockWidget extends Widget
             'America/Los_Angeles',
         ];
 
-        $plugin = Filament::getCurrentOrDefaultPanel()?->getPlugin('filament-world-clock');
+        $plugin = static::getPluginInstance();
 
-        if ($plugin->getTimezones()) {
+        if ($plugin?->getTimezones()) {
             $timezones = $plugin->getTimezones();
         }
+
+        $timeFormat = $plugin?->getTimeFormat() ?? 'H:i';
 
         $times = [];
         foreach ($timezones as $timezone) {
@@ -49,7 +61,7 @@ class WorldClockWidget extends Widget
 
             $times[] = [
                 'name' => __(ucwords($name)),
-                'time' => $time->format($plugin->getTimeFormat() ?? 'H:i'),
+                'time' => $time->format($timeFormat),
                 'flag' => FlagsHelper::get($timezone),
                 'night' => $hour > 17 || $hour <= 6 ? true : false,
                 'timezone' => $gmtOffset,
@@ -61,44 +73,32 @@ class WorldClockWidget extends Widget
 
     public function shouldShowTitle(): bool
     {
-        $plugin = Filament::getCurrentOrDefaultPanel()?->getPlugin('filament-world-clock');
-
-        return $plugin?->getShouldShowTitle();
+        return static::getPluginInstance()?->getShouldShowTitle() ?? true;
     }
 
     public function title()
     {
-        $plugin = Filament::getCurrentOrDefaultPanel()?->getPlugin('filament-world-clock');
-
-        return $plugin?->getTitle();
+        return static::getPluginInstance()?->getTitle();
     }
 
     public function description()
     {
-        $plugin = Filament::getCurrentOrDefaultPanel()?->getPlugin('filament-world-clock');
-
-        return $plugin?->getDescription();
+        return static::getPluginInstance()?->getDescription();
     }
 
     public function quantityPerRow()
     {
-        $plugin = Filament::getCurrentOrDefaultPanel()?->getPlugin('filament-world-clock');
-
-        return $plugin?->getQuantityPerRow();
+        return static::getPluginInstance()?->getQuantityPerRow();
     }
 
     public static function getSort(): int
     {
-        $plugin = Filament::getCurrentOrDefaultPanel()?->getPlugin('filament-world-clock');
-
-        return $plugin?->getSort() ?? -1;
+        return static::getPluginInstance()?->getSort() ?? -1;
     }
 
     public function getColumnSpan(): int | string | array
     {
-        $plugin = Filament::getCurrentOrDefaultPanel()?->getPlugin('filament-world-clock');
-
-        return $plugin?->getColumnSpan() ?? '1/2';
+        return static::getPluginInstance()?->getColumnSpan() ?? '1/2';
     }
 
     public function render(): View
