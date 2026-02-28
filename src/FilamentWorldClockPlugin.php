@@ -24,6 +24,8 @@ class FilamentWorldClockPlugin implements Plugin
 
     public array $timezones = [];
 
+    public array $customFlags = [];
+
     public function getId(): string
     {
         return 'filament-world-clock';
@@ -100,6 +102,18 @@ class FilamentWorldClockPlugin implements Plugin
     public function getTimezones(): ?array
     {
         return $this->evaluate($this->timezones);
+    }
+
+    public function customFlags(array $customFlags = []): static
+    {
+        $this->customFlags = $customFlags;
+
+        return $this;
+    }
+
+    public function getCustomFlags(): array
+    {
+        return $this->customFlags;
     }
 
     public function setQuantityPerRow(Closure | int $value = 1): static
