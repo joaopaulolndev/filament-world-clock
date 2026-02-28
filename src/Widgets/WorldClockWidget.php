@@ -44,6 +44,7 @@ class WorldClockWidget extends Widget
             $timezones = $plugin->getTimezones();
         }
 
+        $customFlags = $plugin?->getCustomFlags() ?? [];
         $timeFormat = $plugin?->getTimeFormat() ?? 'H:i';
 
         $times = [];
@@ -62,7 +63,7 @@ class WorldClockWidget extends Widget
             $times[] = [
                 'name' => __(ucwords($name)),
                 'time' => $time->format($timeFormat),
-                'flag' => FlagsHelper::get($timezone),
+                'flag' => FlagsHelper::get($timezone, $customFlags),
                 'night' => $hour > 17 || $hour <= 6 ? true : false,
                 'timezone' => $gmtOffset,
             ];
