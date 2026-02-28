@@ -89,12 +89,29 @@ FilamentWorldClockPlugin::make()
     ->setTitle('Hours') //Optional title default is: 'World Clock'
     ->setDescription('Different description') //Optional description default is: 'Show hours around the world by timezone'
     ->setQuantityPerRow(1) //Optional quantity per row default is: 1
-    ->setColumnSpan('full') //Optional column span default is: '1/2' 
+    ->setColumnSpan('full') //Optional column span default is: '1/2'
     ->setSort(10)
 ```
 
+### Custom Flags
+
+Flags are automatically resolved for all valid PHP timezones using `DateTimeZone::getLocation()`. If you need to override a specific timezone flag, you can use the `customFlags()` method:
+
+```php
+FilamentWorldClockPlugin::make()
+    ->timezones([
+        'America/New_York',
+        'America/Denver',
+        'Pacific/Guam',
+    ])
+    ->customFlags([
+        'America/Denver' => '/path/to/custom-flag.svg',
+        'Pacific/Guam' => asset('images/guam-flag.svg'),
+    ])
+```
+
 > [!NOTE]
-> if missing some flag, the default value will be used. But you can open a pr to add more flags.
+> Custom flags take the highest priority. For timezones without a country code (e.g. `Etc/UTC`), a placeholder flag is used as fallback.
 
 ## Testing
 
