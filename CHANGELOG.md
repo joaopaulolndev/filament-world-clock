@@ -2,6 +2,16 @@
 
 All notable changes to `filament-world-clock` will be documented in this file.
 
+## v2.0.2 - 2026-03-04
+
+### Breaking Changes
+
+- **Minimum Filament version bumped to `^4.8`** — required due to the new `PageConfiguration` parameter added to `Page::routes()` in [filamentphp/filament#19225](https://github.com/filamentphp/filament/pull/19225)
+
+### What's Changed
+
+- Update `composer.json` to require `filament/filament: ^4.8`
+
 ## v2.0.1 - 2026-02-28
 
 ### What's Changed
@@ -9,11 +19,13 @@ All notable changes to `filament-world-clock` will be documented in this file.
 #### Bug Fixes
 
 - **fix(world-clock):** Resolve missing flags and console errors for unmapped timezones (#10)
+  
   - Replace hardcoded 150-entry timezone map with dynamic resolution using `DateTimeZone::getLocation()`
   - Add `customFlags()` plugin method for user overrides
   - Add `country-xx.svg` fallback for timezones without a country code (e.g. `Etc/UTC`)
   
 - **fix(world-clock):** Safely access plugin instance to prevent errors when panel is not current (#13)
+  
 
 **Full Changelog**: https://github.com/joaopaulolndev/filament-world-clock/compare/v2.0.0...v2.0.1
 
