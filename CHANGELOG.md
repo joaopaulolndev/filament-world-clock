@@ -2,6 +2,16 @@
 
 All notable changes to `filament-world-clock` will be documented in this file.
 
+## v3.0.2 - 2026-03-04
+
+### Breaking Changes
+
+- **Minimum Filament version bumped to `^5.3`** — required due to the new `PageConfiguration` parameter added to `Page::routes()` in [filamentphp/filament#19225](https://github.com/filamentphp/filament/pull/19225)
+
+### What's Changed
+
+- Update `composer.json` to require `filament/filament: ^5.3`
+
 ## v2.0.2 - 2026-03-04
 
 ### Breaking Changes
