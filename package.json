@@ -4,7 +4,7 @@
         "build": "postcss resources/css/index.css -o resources/build/filament-world-clock.css"
     },
     "devDependencies": {
-        "cssnano": "^6.0.1",
+        "cssnano": "^8.0.2",
         "postcss": "^8.4.27",
         "postcss-cli": "^10.1.0",
         "postcss-nesting": "^12.0.0"
